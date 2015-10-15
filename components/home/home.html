@@ -88,12 +88,13 @@
       </div>
     </form>
     <div class="center-block">
-      <button type="submit" scroll-to="scroll-target" callback-before="home.submitEvent()" offset="-100" class="btn btn-lg btn-primary btn-green col-sm-2 col-sm-offset-5 col-xs-12">決定</button>
+      <button type="submit" scroll-to="scroll-target" callback-before="home.submitEvent()" offset="0" class="btn btn-lg btn-primary btn-green col-sm-2 col-sm-offset-5 col-xs-12">決定</button>
     </div>
   </div>
 </section>
 
 <section id="block2" ng-show="home.creationSuccess">
+<br><br>
 イベントを作成しました。下記URLへアクセスしてください。
   <a href="{{home.attendanceUrl}}">{{home.attendanceUrl}}</a>
 </section>
