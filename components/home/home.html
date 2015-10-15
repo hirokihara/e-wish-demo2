@@ -1,4 +1,5 @@
-<section id="block1" ng-hide="home.eventId">
+<div id="scroll-target"></div>
+<section id="block1" ng-hide="home.creationSuccess">
   <div id="eventCreationForm">
     <form class="form-horizontal">
       <div class="row">
@@ -87,14 +88,14 @@
       </div>
     </form>
     <div class="center-block">
-      <button type="submit" class="btn btn-lg btn-primary btn-green col-sm-2 col-sm-offset-5 col-xs-12" ng-click="home.submitEvent()">決定</button>
+      <button type="submit" scroll-to="scroll-target" callback-before="home.submitEvent()" class="btn btn-lg btn-primary btn-green col-sm-2 col-sm-offset-5 col-xs-12">決定</button>
     </div>
   </div>
 </section>
 
 <section id="block2" ng-show="home.creationSuccess">
 イベントを作成しました。下記URLへアクセスしてください。
-  <a href="http://hirokihara.github.io/e-wish-demo2/attendance/{{home.eventId}}">http://hirokihara.github.io/e-wish-demo2/attendance/{{home.eventId}}</a>
+  <a href="{{home.attendanceUrl}}">{{home.attendanceUrl}}</a>
 </section>
 
 
