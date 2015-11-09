@@ -56,14 +56,18 @@
                   <div>
                     <label class="control-label cotrol-label-item-title">日にち<br></label>
                   </div>
-                  <div ng-repeat="arr in attendance.memberData.choiceSet" style="padding-right: 0px; margin-bottom: 3px;">
-                    <font size="-1">{{arr.date}}</font>
+                  <table>
+                  <tr ng-repeat="arr in attendance.memberData.choiceSet">
+                    <td style="height: 38px; max-width: 200px;"><div style="margin-right: 10px;"><font size="-1">{{arr.date}}</font></div></td>
+                    <td>
                     <b>
                       <label class="btn btn-choices" ng-model="arr.choice" btn-radio="'○'">○</label>
                       <label class="btn btn-choices" ng-model="arr.choice" btn-radio="'△'">△</label>
                       <label class="btn btn-choices" ng-model="arr.choice" btn-radio="'×'">×</label>
                     </b>
-                  </div>
+                    </td>
+                  </tr>
+                  </table>
                 </div>
                 <!--
                 ** コメント
